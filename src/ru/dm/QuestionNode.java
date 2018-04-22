@@ -5,7 +5,6 @@ package ru.dm;
  */
 public class QuestionNode extends Node {
     private Question question;
-    private double grade;
 
     public QuestionNode() {
         super.setType(Type.Question);
@@ -13,6 +12,7 @@ public class QuestionNode extends Node {
 
     public QuestionNode(Question question) {
         this.question = question;
+        super.setType(Type.Question);
     }
 
     public Question getQuestion() {
@@ -21,13 +21,5 @@ public class QuestionNode extends Node {
 
     public void setQuestion(Question question) {
         this.question = question;
-    }
-
-    public double getGrade() {
-        return grade;
-    }
-
-    public void setGrade(double grade) {
-        this.grade = grade;
     }
 }
