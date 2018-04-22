@@ -10,6 +10,7 @@ public class Node {
     private String name;
     private Type type;
     private List<Node> childNodes = new ArrayList<Node>();
+    // private List<Double> weights = new ArrayList<Double>();
     private double probability;
     private double weight;
 
@@ -44,6 +45,7 @@ public class Node {
         if (this.probability == 0 && !this.childNodes.isEmpty()) {
             double probabilityResult = 0;
             for (Node node: childNodes) {
+                // childNodes.indexOf(node);
                 probabilityResult += node.getProbability() * node.getWeight();
             }
             return probabilityResult;
