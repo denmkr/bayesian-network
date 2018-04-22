@@ -61,4 +61,5 @@ public class Course {
     public void setCompetenceNode(Node competenceNode) {
         this.competenceNode = competenceNode;
     }
+
 }
