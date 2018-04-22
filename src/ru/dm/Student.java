@@ -1,5 +1,6 @@
 package ru.dm;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,7 +10,18 @@ public class Student {
     private String name;
     private String group;
     private List<String> activityDates;
-    private List<Course> courses;
+    private List<Course> courses = new ArrayList<Course>();
+
+    public Student(String name, String group, List<Course> courses) {
+        this.name = name;
+        this.group = group;
+        this.courses = courses;
+    }
+
+    public Student(String name, String group) {
+        this.name = name;
+        this.group = group;
+    }
 
     public String getName() {
         return name;

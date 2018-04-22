@@ -1,5 +1,7 @@
 package ru.dm;
 
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,7 +14,6 @@ public class Main {
         Node node211 = new Node("Node", Type.Test,0.22, 0.5);
         Node node212 = new Node("Node", Type.Test,0.54, 0.5);
 
-
         node211.setNotKnownProbability(0.05);
         node212.setNotKnownProbability(0.12);
 
@@ -23,7 +24,13 @@ public class Main {
         node1.addChildNode(node2);
         node1.addChildNode(node3);
 
-        System.out.println(node1.getProbability());
-        System.out.println(node1.getNotKnownProbability());
+        Student student = new Student("Denis", "11401");
+        student.addCourse(new Course("Java course", node1));
+
+        List<Course> courses = student.getCourses();
+        Course course = courses.get(0);
+
+        System.out.println(course.getCompetenceNode().getProbability());
+        System.out.println(course.getCompetenceNode().getNotKnownProbability());
     }
 }

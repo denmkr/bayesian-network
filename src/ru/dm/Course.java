@@ -10,6 +10,18 @@ public class Course {
     private String creationDate;
     private Node competenceNode;
 
+    public Course(String name, Node competenceNode) {
+        this.name = name;
+        this.competenceNode = competenceNode;
+    }
+
+    public Course(String name, String description, String author, Node competenceNode) {
+        this.name = name;
+        this.description = description;
+        this.author = author;
+        this.competenceNode = competenceNode;
+    }
+
     public String getName() {
         return name;
     }
