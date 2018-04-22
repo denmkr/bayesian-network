@@ -10,9 +10,8 @@ public class Node {
     private String name;
     private Type type;
     private List<Node> childNodes = new ArrayList<Node>();
-    // private List<Double> weights = new ArrayList<Double>();
+    private List<Double> weights = new ArrayList<Double>();
     private double probability;
-    private double weight;
 
     private double notKnownProbability;
 
@@ -25,17 +24,23 @@ public class Node {
         this.probability = probability;
     }
 
-    public Node(String name, double probability, double weight) {
-        this.name = name;
-        this.probability = probability;
-        this.weight = weight;
-    }
-
-    public Node(String name, Type type, double probability, double weight) {
+    public Node(String name, Type type, double probability) {
         this.name = name;
         this.type = type;
         this.probability = probability;
-        this.weight = weight;
+    }
+
+    public Node(String name, double probability, List<Double> weights) {
+        this.name = name;
+        this.probability = probability;
+        this.weights = weights;
+    }
+
+    public Node(String name, Type type, double probability, List<Double> weights) {
+        this.name = name;
+        this.type = type;
+        this.probability = probability;
+        this.weights = weights;
     }
 
     public Node() {
@@ -45,8 +50,8 @@ public class Node {
         if (this.probability == 0 && !this.childNodes.isEmpty()) {
             double probabilityResult = 0;
             for (Node node: childNodes) {
-                // childNodes.indexOf(node);
-                probabilityResult += node.getProbability() * node.getWeight();
+                int weightIndex = childNodes.indexOf(node);
+                probabilityResult += node.getProbability() * this.weights.get(weightIndex);
             }
             return probabilityResult;
         }
@@ -57,7 +62,8 @@ public class Node {
         if (this.notKnownProbability == 0 && !this.childNodes.isEmpty()) {
             double notKnownProbabilityResult = 0;
             for (Node node: childNodes) {
-                notKnownProbabilityResult += node.getNotKnownProbability() * node.getWeight();
+                int weightIndex = childNodes.indexOf(node);
+                notKnownProbabilityResult += node.getNotKnownProbability() * this.weights.get(weightIndex);
             }
             return notKnownProbabilityResult;
         }
@@ -92,19 +98,23 @@ public class Node {
         this.name = name;
     }
 
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
     public Type getType() {
         return type;
     }
 
     public void setType(Type type) {
         this.type = type;
+    }
+
+    public List<Double> getWeights() {
+        return weights;
+    }
+
+    public void setWeights(List<Double> weights) {
+        this.weights = weights;
+    }
+
+    public void addWeight(Double weight) {
+        this.weights.add(weight);
     }
 }
