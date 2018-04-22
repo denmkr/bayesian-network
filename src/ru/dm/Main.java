@@ -147,9 +147,11 @@ public class Main {
             System.out.println(student.getName());
             for (Course course: student.getCourses()) {
                 System.out.println(course.getName());
-                System.out.println("Competence: " + course.getCompetenceLevelResult() * 100 + "%");
-                System.out.println("Error: " + course.getCompetenceErrorResult() * 100 + "%");
-                System.out.println("Not Learnt: " + course.getCompetenceNotLearntResult() * 100 + "%");
+                System.out.println("Competence: " + String.format("%.2f", course.getCompetenceLevelResult() * 100) + "%");
+                System.out.println("Error: " + String.format("%.2f", course.getCompetenceErrorResult() * 100) + "%");
+                student.getErrorSubTopicNodes();
+
+                System.out.println("Not Learnt: " + String.format("%.2f", course.getCompetenceNotLearntResult() * 100) + "%");
                 System.out.println();
             }
         }

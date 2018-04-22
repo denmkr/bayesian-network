@@ -116,6 +116,19 @@ public class Student {
         }
     }
 
+    public void getErrorSubTopicNodes() {
+        System.out.println("Error subtopics:");
+        for (Course course: this.courses) {
+            for (Node topicNode: course.getCompetenceNode().getChildNodes()) {
+                for (Node subTopicNode: topicNode.getChildNodes()) {
+                    if (subTopicNode.getNotKnownProbability() > 0.10) {
+                        System.out.println(subTopicNode.getName());
+                    }
+                }
+            }
+        }
+    }
+
     public void addActivityDate(String date) {
         this.activityDates.add(date);
     }
