@@ -62,4 +62,15 @@ public class Course {
         this.competenceNode = competenceNode;
     }
 
+    public double getCompetenceLevelResult() {
+        return this.competenceNode.getProbability();
+    }
+
+    public double getCompetenceErrorResult() {
+        return this.competenceNode.getNotKnownProbability();
+    }
+
+    public double getCompetenceNotLearntResult() {
+        return this.competenceNode.getNotLearntProbability();
+    }
 }

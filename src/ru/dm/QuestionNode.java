@@ -5,6 +5,7 @@ package ru.dm;
  */
 public class QuestionNode extends Node {
     private Question question;
+    private boolean isChanged = false;
 
     public QuestionNode() {
         super.setType(Type.Question);
@@ -21,5 +22,13 @@ public class QuestionNode extends Node {
 
     public void setQuestion(Question question) {
         this.question = question;
+    }
+
+    public boolean isChanged() {
+        return this.isChanged;
+    }
+
+    public void setChanged(boolean value) {
+        this.isChanged = value;
     }
 }

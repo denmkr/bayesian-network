@@ -2,6 +2,7 @@ package ru.dm;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 /**
  * Created by denis on 21/04/2018.
@@ -11,6 +12,7 @@ public class Student {
     private String group;
     private List<String> activityDates;
     private List<Course> courses = new ArrayList<Course>();
+    private List<Vector<Double>> grades = new ArrayList<Vector<Double>>();
 
     public Student(String name, String group, List<Course> courses) {
         this.name = name;
@@ -57,6 +59,47 @@ public class Student {
 
     public void addCourse(Course course) {
         this.courses.add(course);
+    }
+
+    public List<Vector<Double>> getGrades() {
+        return grades;
+    }
+
+    public void setGrades(List<Vector<Double>> gradesList) {
+        this.grades = gradesList;
+    }
+
+    public void calculateNetwork() {
+        int gradeIndex = 0;
+        int courseIndex = 0;
+        List<QuestionNode> usedQuestionNodes = new ArrayList<QuestionNode>();
+
+        for (Course course: this.courses) {
+            Node competenceNode = course.getCompetenceNode();
+            for (Node topicNode: competenceNode.getChildNodes()) {
+                for (Node subTopicNode: topicNode.getChildNodes()) {
+                    for (Node testNode: subTopicNode.getChildNodes()) {
+                        for (Node questionNode: testNode.getChildNodes()) {
+                            if (!((QuestionNode) questionNode).isChanged()) {
+                                questionNode.setProbability(this.grades.get(courseIndex).get(gradeIndex));
+                                ((QuestionNode) questionNode).setChanged(true);
+                                usedQuestionNodes.add((QuestionNode) questionNode);
+                                gradeIndex++;
+                            }
+                        }
+                    }
+                }
+            }
+            courseIndex++;
+        }
+
+        for (QuestionNode questionNode: usedQuestionNodes) {
+            questionNode.setChanged(false);
+        }
+    }
+
+    public void addGrades(Vector<Double> grades) {
+        this.grades.add(grades);
     }
 
     public void addActivityDate(String date) {

@@ -2,12 +2,23 @@ package ru.dm;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 public class Main {
 
     public static void main(String[] args) {
+        Course course = createCourse();
+        List<Student> students = createStudents();
 
-        /* NETWORK BUILDING */
+        for (Student student: students) {
+            student.addCourse(course);
+        }
+
+        updateStudentsGrades(students);
+        showStatisticByStudents(students);
+    }
+
+    public static Course createCourse() {
 
         Node competenceNode1 = new Node("Competence1", Type.Competence, 0);
         competenceNode1.addWeight(0.5);
@@ -70,44 +81,54 @@ public class Main {
         competenceNode1.addChildNode(topicNode1);
         competenceNode1.addChildNode(topicNode2);
 
+        return new Course("Java", competenceNode1);
+    }
 
-        /* STUDENTS CREATING */
+    public static List<Student> createStudents() {
 
         Student student1 = new Student("Denis", "11401");
-        questionNode1.setProbability(0.25);
-        questionNode2.setProbability(0.5);
-        questionNode3.setProbability(0);
-        questionNode4.setProbability(0.22);
-        questionNode5.setProbability(1);
-
-        questionNode1.setNotKnownProbability(0.75);
-        questionNode2.setNotKnownProbability(0.5);
-        questionNode3.setNotKnownProbability(1);
-        questionNode4.setNotKnownProbability(0.5);
-        questionNode5.setNotKnownProbability(0);
-
-        student1.addCourse(new Course("Java Course", competenceNode1));
-        System.out.println("Competence of " + student1.getName() + ": " + student1.getCourses().get(0).getCompetenceNode().getProbability() * 100 + "%");
-        System.out.println("Error of " + student1.getName() + ": " + student1.getCourses().get(0).getCompetenceNode().getNotKnownProbability() * 100 + "%");
-        System.out.println("Not Learnt of " + student1.getName() + ": " + student1.getCourses().get(0).getCompetenceNode().getNotLearntProbability() * 100 + "%");
-        System.out.println();
-
         Student student2 = new Student("Maxim", "11402");
-        questionNode1.setProbability(0.2);
-        questionNode2.setProbability(0);
-        questionNode3.setProbability(0.4);
-        questionNode4.setProbability(1);
-        questionNode5.setProbability(0.75);
 
-        questionNode1.setNotKnownProbability(0.15);
-        questionNode2.setNotKnownProbability(0.5);
-        questionNode3.setNotKnownProbability(0);
-        questionNode4.setNotKnownProbability(0);
-        questionNode5.setNotKnownProbability(0.25);
+        List<Student> students = new ArrayList<Student>();
+        students.add(student1);
+        students.add(student2);
 
-        student2.addCourse(new Course("Java Course", competenceNode1));
-        System.out.println("Competence of " + student2.getName() + ": " + student2.getCourses().get(0).getCompetenceNode().getProbability() * 100 + "%");
-        System.out.println("Error of " + student2.getName() + ": " + student2.getCourses().get(0).getCompetenceNode().getNotKnownProbability() * 100 + "%");
-        System.out.println("Not Learnt of " + student2.getName() + ": " + student2.getCourses().get(0).getCompetenceNode().getNotLearntProbability() * 100 + "%");
+        return students;
+    }
+
+    public static void updateStudentsGrades(List<Student> students) {
+        Vector<Double> gradesVector1 = new Vector<Double>();
+        gradesVector1.add(0.75);
+        gradesVector1.add(0.5);
+        gradesVector1.add(0.0);
+        gradesVector1.add(0.22);
+        gradesVector1.add(0.88);
+        List<Vector<Double>> gradesList1 = new ArrayList<Vector<Double>>();
+        gradesList1.add(gradesVector1);
+        students.get(0).setGrades(gradesList1);
+
+        Vector<Double> gradesVector2 = new Vector<Double>();
+        gradesVector2.add(0.2);
+        gradesVector2.add(0.0);
+        gradesVector2.add(0.4);
+        gradesVector2.add(1.0);
+        gradesVector2.add(0.75);
+        List<Vector<Double>> gradesList2 = new ArrayList<Vector<Double>>();
+        gradesList2.add(gradesVector2);
+        students.get(1).setGrades(gradesList2);
+    }
+
+    public static void showStatisticByStudents(List<Student> students) {
+        for (Student student: students) {
+            student.calculateNetwork();
+            System.out.println(student.getName());
+            for (Course course: student.getCourses()) {
+                System.out.println(course.getName());
+                System.out.println("Competence: " + course.getCompetenceLevelResult() * 100 + "%");
+                System.out.println("Error: " + course.getCompetenceErrorResult() * 100 + "%");
+                System.out.println("Not Learnt: " + course.getCompetenceNotLearntResult() * 100 + "%");
+                System.out.println();
+            }
+        }
     }
 }
