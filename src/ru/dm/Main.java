@@ -71,7 +71,7 @@ public class Main {
         competenceNode1.addChildNode(topicNode2);
 
 
-        /* STUDENT CREATING */
+        /* STUDENTS CREATING */
 
         Student student1 = new Student("Denis", "11401");
         questionNode1.setProbability(0.25);
@@ -80,9 +80,17 @@ public class Main {
         questionNode4.setProbability(0.22);
         questionNode5.setProbability(1);
 
+        questionNode1.setNotKnownProbability(0.75);
+        questionNode2.setNotKnownProbability(0.5);
+        questionNode3.setNotKnownProbability(1);
+        questionNode4.setNotKnownProbability(0.5);
+        questionNode5.setNotKnownProbability(0);
+
         student1.addCourse(new Course("Java Course", competenceNode1));
         System.out.println("Competence of " + student1.getName() + ": " + student1.getCourses().get(0).getCompetenceNode().getProbability() * 100 + "%");
-
+        System.out.println("Error of " + student1.getName() + ": " + student1.getCourses().get(0).getCompetenceNode().getNotKnownProbability() * 100 + "%");
+        System.out.println("Not Learnt of " + student1.getName() + ": " + student1.getCourses().get(0).getCompetenceNode().getNotLearntProbability() * 100 + "%");
+        System.out.println();
 
         Student student2 = new Student("Maxim", "11402");
         questionNode1.setProbability(0.2);
@@ -91,8 +99,15 @@ public class Main {
         questionNode4.setProbability(1);
         questionNode5.setProbability(0.75);
 
+        questionNode1.setNotKnownProbability(0.15);
+        questionNode2.setNotKnownProbability(0.5);
+        questionNode3.setNotKnownProbability(0);
+        questionNode4.setNotKnownProbability(0);
+        questionNode5.setNotKnownProbability(0.25);
+
         student2.addCourse(new Course("Java Course", competenceNode1));
         System.out.println("Competence of " + student2.getName() + ": " + student2.getCourses().get(0).getCompetenceNode().getProbability() * 100 + "%");
-
+        System.out.println("Error of " + student2.getName() + ": " + student2.getCourses().get(0).getCompetenceNode().getNotKnownProbability() * 100 + "%");
+        System.out.println("Not Learnt of " + student2.getName() + ": " + student2.getCourses().get(0).getCompetenceNode().getNotLearntProbability() * 100 + "%");
     }
 }

@@ -70,6 +70,18 @@ public class Node {
         else return notKnownProbability;
     }
 
+    public double getNotLearntProbability() {
+        if (this.probability == 0 && !this.childNodes.isEmpty()) {
+            double notLearntProbabilityResult = 0;
+            for (Node node: childNodes) {
+                int weightIndex = childNodes.indexOf(node);
+                notLearntProbabilityResult += (1 - node.getNotKnownProbability() - node.getProbability()) * this.weights.get(weightIndex);
+            }
+            return notLearntProbabilityResult;
+        }
+        else return (1 - getNotKnownProbability() - getProbability());
+    }
+
     public void setNotKnownProbability(double notKnownProbability) {
         this.notKnownProbability = notKnownProbability;
     }
