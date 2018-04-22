@@ -15,6 +15,7 @@ public class Main {
         }
 
         updateStudentsGrades(students);
+        updateStudentsErrors(students);
         showStatisticByStudents(students);
     }
 
@@ -116,6 +117,28 @@ public class Main {
         List<Vector<Double>> gradesList2 = new ArrayList<Vector<Double>>();
         gradesList2.add(gradesVector2);
         students.get(1).setGrades(gradesList2);
+    }
+
+    public static void updateStudentsErrors(List<Student> students) {
+        Vector<Double> errorsVector1 = new Vector<Double>();
+        errorsVector1.add(0.25);
+        errorsVector1.add(0.1);
+        errorsVector1.add(0.0);
+        errorsVector1.add(0.11);
+        errorsVector1.add(0.0);
+        List<Vector<Double>> errorsList1 = new ArrayList<Vector<Double>>();
+        errorsList1.add(errorsVector1);
+        students.get(0).setErrors(errorsList1);
+
+        Vector<Double> errorsVector2 = new Vector<Double>();
+        errorsVector2.add(0.8);
+        errorsVector2.add(1.0);
+        errorsVector2.add(0.1);
+        errorsVector2.add(0.0);
+        errorsVector2.add(0.11);
+        List<Vector<Double>> errorsList2 = new ArrayList<Vector<Double>>();
+        errorsList2.add(errorsVector2);
+        students.get(1).setErrors(errorsList2);
     }
 
     public static void showStatisticByStudents(List<Student> students) {

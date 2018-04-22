@@ -13,6 +13,7 @@ public class Student {
     private List<String> activityDates;
     private List<Course> courses = new ArrayList<Course>();
     private List<Vector<Double>> grades = new ArrayList<Vector<Double>>();
+    private List<Vector<Double>> errors = new ArrayList<Vector<Double>>();
 
     public Student(String name, String group, List<Course> courses) {
         this.name = name;
@@ -69,6 +70,22 @@ public class Student {
         this.grades = gradesList;
     }
 
+    public void addGrades(Vector<Double> grades) {
+        this.grades.add(grades);
+    }
+
+    public List<Vector<Double>> getErrors() {
+        return errors;
+    }
+
+    public void setErrors(List<Vector<Double>> errorsList) {
+        this.errors = errorsList;
+    }
+
+    public void addErrors(Vector<Double> errors) {
+        this.errors.add(errors);
+    }
+
     public void calculateNetwork() {
         int gradeIndex = 0;
         int courseIndex = 0;
@@ -82,6 +99,7 @@ public class Student {
                         for (Node questionNode: testNode.getChildNodes()) {
                             if (!((QuestionNode) questionNode).isChanged()) {
                                 questionNode.setProbability(this.grades.get(courseIndex).get(gradeIndex));
+                                questionNode.setNotKnownProbability(this.errors.get(courseIndex).get(gradeIndex));
                                 ((QuestionNode) questionNode).setChanged(true);
                                 usedQuestionNodes.add((QuestionNode) questionNode);
                                 gradeIndex++;
@@ -96,10 +114,6 @@ public class Student {
         for (QuestionNode questionNode: usedQuestionNodes) {
             questionNode.setChanged(false);
         }
-    }
-
-    public void addGrades(Vector<Double> grades) {
-        this.grades.add(grades);
     }
 
     public void addActivityDate(String date) {
