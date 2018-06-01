@@ -2,6 +2,7 @@
 
 ## Initial queries for Neo4j Database
 
+```
 CREATE (:Node { name: 'Competence 1', type: 'Competence' })
 
 CREATE (:Node { name: 'Topic 1', type: 'Topic' })
@@ -74,3 +75,4 @@ CREATE (a)-[:Relation {weight:'1.0'}]->(b)
 MATCH (a),(b)
 WHERE a.name = 'Test 4' AND b.name = 'Question 5'
 CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+```
