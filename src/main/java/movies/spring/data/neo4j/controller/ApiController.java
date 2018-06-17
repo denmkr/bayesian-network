@@ -268,11 +268,9 @@ public class ApiController {
 
     public void updateStudentGrades(Student student) {
         Vector<Double> gradesVector = new Vector<Double>();
-        gradesVector.add(Math.random() * 0.7);
-        gradesVector.add(Math.random() * 0.7);
-        gradesVector.add(Math.random() * 0.7);
-        gradesVector.add(Math.random() * 0.7);
-        gradesVector.add(Math.random() * 0.7);
+        for (int i=0; i<70; i++) {
+            gradesVector.add(Math.random() * 0.7);
+        }
         List<Vector<Double>> gradesList = new ArrayList<Vector<Double>>();
         gradesList.add(gradesVector);
         student.setGrades(gradesList);
@@ -280,11 +278,9 @@ public class ApiController {
 
     public void updateStudentErrors(Student student) {
         Vector<Double> errorsVector = new Vector<Double>();
-        errorsVector.add(Math.random() * 0.3);
-        errorsVector.add(Math.random() * 0.3);
-        errorsVector.add(Math.random() * 0.3);
-        errorsVector.add(Math.random() * 0.3);
-        errorsVector.add(Math.random() * 0.3);
+        for (int i=0; i<70; i++) {
+            errorsVector.add(Math.random() * 0.3);
+        }
         List<Vector<Double>> errorsList = new ArrayList<Vector<Double>>();
         errorsList.add(errorsVector);
         student.setErrors(errorsList);

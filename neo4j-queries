@@ -1,0 +1,988 @@
+CREATE (:Node { name: 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений', type: 'Competence' })
+
+
+CREATE (:Node { name: 'Устройство сети Интернет', type: 'Topic' })
+CREATE (:Node { name: 'Основные принципы и тенденции веб-дизайна', type: 'Topic' })
+CREATE (:Node { name: 'HTML5', type: 'Topic' })
+CREATE (:Node { name: 'CSS3', type: 'Topic' })
+CREATE (:Node { name: 'JavaScript и jQuery', type: 'Topic' })
+CREATE (:Node { name: 'Ubuntu Linux', type: 'Topic' })
+CREATE (:Node { name: 'Основы PHP5', type: 'Topic' })
+CREATE (:Node { name: 'Принципы построения веб-приложений на PHP5', type: 'Topic' })
+CREATE (:Node { name: 'ООП в PHP5', type: 'Topic' })
+CREATE (:Node { name: 'MVC в PHP5', type: 'Topic' })
+CREATE (:Node { name: 'MySQL', type: 'Topic' })
+CREATE (:Node { name: 'Безопасность веб-приложений', type: 'Topic' })
+
+
+CREATE (:Node { name: 'Введение в клиент-серверную модель', type: 'Subtopic' })
+CREATE (:Node { name: 'Типичное серверное и клиентское ПО', type: 'Subtopic' })
+CREATE (:Node { name: 'Адресация в интернете', type: 'Subtopic' })
+CREATE (:Node { name: 'Хостинг', type: 'Subtopic' })
+CREATE (:Node { name: 'Веб-приложения', type: 'Subtopic' })
+
+CREATE (:Node { name: 'Основы веб-дизайна', type: 'Subtopic' })
+CREATE (:Node { name: 'Проблемы разнообразия устройств просмотра', type: 'Subtopic' })
+
+CREATE (:Node { name: 'Принципы языков разметки', type: 'Subtopic' })
+CREATE (:Node { name: 'Основы HTML5', type: 'Subtopic' })
+CREATE (:Node { name: 'Новинки HTML и CSS', type: 'Subtopic' })
+CREATE (:Node { name: 'Использование HTML и CSS', type: 'Subtopic' })
+
+CREATE (:Node { name: 'Каскадные таблицы стилей', type: 'Subtopic' })
+CREATE (:Node { name: 'Препроцессоры CSS', type: 'Subtopic' })
+
+CREATE (:Node { name: 'JavaScript', type: 'Subtopic' })
+CREATE (:Node { name: 'Прототипно-ориентированные ЯП', type: 'Subtopic' })
+CREATE (:Node { name: 'jQuery. Применимость фреймворка и основной функционал', type: 'Subtopic' })
+
+CREATE (:Node { name: 'Основы Ubuntu Linux', type: 'Subtopic' })
+CREATE (:Node { name: 'Работа с Ubuntu Linux в консоли', type: 'Subtopic' })
+CREATE (:Node { name: 'Установка и настройка необходимых сервисов для работы php', type: 'Subtopic' })
+
+CREATE (:Node { name: 'Синтаксис PHP5', type: 'Subtopic' })
+CREATE (:Node { name: 'Основные принципы и конструкции языка', type: 'Subtopic' })
+
+CREATE (:Node { name: 'Обзор стандартных модулей и функций', type: 'Subtopic' })
+
+CREATE (:Node { name: 'Принципы ООП', type: 'Subtopic' })
+CREATE (:Node { name: 'Реализация шаблонов проектирования', type: 'Subtopic' })
+
+CREATE (:Node { name: 'MVC для создания каркаса веб-приложения', type: 'Subtopic' })
+
+CREATE (:Node { name: 'Продвинутые техники и работа с СУБД в PHP5', type: 'Subtopic' })
+CREATE (:Node { name: 'Использование MySQL для создания веб-приложения', type: 'Subtopic' })
+
+CREATE (:Node { name: 'Методы защиты веб-приложений от взлома', type: 'Subtopic' })
+
+
+
+CREATE (:Node { name: 'Введение в клиент-серверную модель', type: 'Test' })
+CREATE (:Node { name: 'Взаимодействие ПО между собой на сервере', type: 'Test' })
+CREATE (:Node { name: 'Адресация в интернете', type: 'Test' })
+CREATE (:Node { name: 'Хостинг', type: 'Test' })
+CREATE (:Node { name: 'Типы', type: 'Test' })
+CREATE (:Node { name: 'Функционал', type: 'Test' })
+CREATE (:Node { name: 'Составляющие', type: 'Test' })
+
+CREATE (:Node { name: 'Основные принципы', type: 'Test' })
+CREATE (:Node { name: 'Современные тенденции', type: 'Test' })
+CREATE (:Node { name: 'Проблемы разнообразия устройств просмотра', type: 'Test' })
+
+CREATE (:Node { name: 'DOM', type: 'Test' })
+CREATE (:Node { name: 'теги и атрибуты', type: 'Test' })
+CREATE (:Node { name: 'формы', type: 'Test' })
+CREATE (:Node { name: 'встраивание медиа-материалов', type: 'Test' })
+CREATE (:Node { name: 'Новинки и особые возможности 5-ой версии HTML и CSS3', type: 'Test' })
+CREATE (:Node { name: 'Настольные устройства', type: 'Test' })
+CREATE (:Node { name: 'Мобильные устройства', type: 'Test' })
+
+CREATE (:Node { name: 'Принципы', type: 'Test' })
+CREATE (:Node { name: 'Основные свойства', type: 'Test' })
+CREATE (:Node { name: 'SASS', type: 'Test' })
+CREATE (:Node { name: 'LESS', type: 'Test' })
+
+CREATE (:Node { name: 'Применимость языка', type: 'Test' })
+CREATE (:Node { name: 'Основные принципы языка', type: 'Test' })
+CREATE (:Node { name: 'Основные функции', type: 'Test' })
+CREATE (:Node { name: 'Работа с DOM', type: 'Test' })
+CREATE (:Node { name: 'События', type: 'Test' })
+CREATE (:Node { name: 'Лямбда-выражения', type: 'Test' })
+CREATE (:Node { name: 'Получения элемента', type: 'Test' })
+CREATE (:Node { name: 'Связанная анимация', type: 'Test' })
+CREATE (:Node { name: 'Выдвижная панель', type: 'Test' })
+CREATE (:Node { name: 'Галерея изображений', type: 'Test' })
+CREATE (:Node { name: 'Кликабельные блоки', type: 'Test' })
+
+
+CREATE (:Node { name: 'Основы устройства Ubuntu Linux', type: 'Test' })
+CREATE (:Node { name: 'Управление терминалом', type: 'Test' })
+CREATE (:Node { name: 'Работа с файлами', type: 'Test' })
+CREATE (:Node { name: 'Получение справки', type: 'Test' })
+CREATE (:Node { name: 'Архивация', type: 'Test' })
+CREATE (:Node { name: 'Работа с менеджером пакетов', type: 'Test' })
+CREATE (:Node { name: 'Манипуляции с текстом', type: 'Test' })
+CREATE (:Node { name: 'Монтирование файловых систем', type: 'Test' })
+CREATE (:Node { name: 'Установка и настройка Apache 2.2 на ОС Ubuntu 14.04', type: 'Test' })
+CREATE (:Node { name: 'Установка и настройка PHP5 на ОС Ubuntu 14.04', type: 'Test' })
+
+CREATE (:Node { name: 'Переменные и типы данных', type: 'Test' })
+CREATE (:Node { name: 'Условные операторы', type: 'Test' })
+CREATE (:Node { name: 'Циклы', type: 'Test' })
+CREATE (:Node { name: 'Массивы', type: 'Test' })
+CREATE (:Node { name: 'Основные принципы и конструкции языка', type: 'Test' })
+
+CREATE (:Node { name: 'Работа со строками', type: 'Test' })
+CREATE (:Node { name: 'Работа с массивами', type: 'Test' })
+CREATE (:Node { name: 'Работа с файловой системой', type: 'Test' })
+CREATE (:Node { name: 'Работа с сессиями', type: 'Test' })
+CREATE (:Node { name: 'Работа с формами', type: 'Test' })
+
+
+CREATE (:Node { name: 'Инкапсуляция', type: 'Test' })
+CREATE (:Node { name: 'Наследование', type: 'Test' })
+CREATE (:Node { name: 'Полиморфизм', type: 'Test' })
+CREATE (:Node { name: 'Порождающие шаблоны', type: 'Test' })
+CREATE (:Node { name: 'Структурные шаблоны', type: 'Test' })
+CREATE (:Node { name: 'Поведенческие шаблоны', type: 'Test' })
+
+CREATE (:Node { name: 'MVC архитектура', type: 'Test' })
+
+CREATE (:Node { name: 'Работа с MySQL из PHP5', type: 'Test' })
+CREATE (:Node { name: 'PDO', type: 'Test' })
+CREATE (:Node { name: 'Объектно-реляционный проектор (ORM) Doctrine2', type: 'Test' })
+CREATE (:Node { name: 'Создание веб-приложения', type: 'Test' })
+
+CREATE (:Node { name: 'Практика использования приёмов защиты веб-приложений от взлома', type: 'Test' })
+
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'Устройство сети Интернет' 
+CREATE (a)-[:Relation {weight:'0.04'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'Основные принципы и тенденции веб-дизайна' 
+CREATE (a)-[:Relation {weight:'0.04'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'HTML5' 
+CREATE (a)-[:Relation {weight:'0.06'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'CSS3' 
+CREATE (a)-[:Relation {weight:'0.06'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'JavaScript и jQuery' 
+CREATE (a)-[:Relation {weight:'0.06'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'Ubuntu Linux' 
+CREATE (a)-[:Relation {weight:'0.08'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'Основы PHP5' 
+CREATE (a)-[:Relation {weight:'0.12'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'Принципы построения веб-приложений на PHP5' 
+CREATE (a)-[:Relation {weight:'0.12'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'ООП в PHP5' 
+CREATE (a)-[:Relation {weight:'0.14'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'MVC в PHP5' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'MySQL' 
+CREATE (a)-[:Relation {weight:'0.12'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Понимание механизмов работы веб-приложений, обладание знаний, умений и навыков для написания собственных приложений' AND b.name = 'Безопасность веб-приложений' 
+CREATE (a)-[:Relation {weight:'0.06'}]->(b)
+
+
+
+MATCH (a),(b)
+WHERE a.name = 'Устройство сети Интернет' AND b.name = 'Введение в клиент-серверную модель' AND a.type = 'Subtopic' AND b.type = 'Test'
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Устройство сети Интернет' AND b.name = 'Типичное серверное и клиентское ПО' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Введение в клиент-серверную модель' AND b.name = 'Введение в клиент-серверную модель' AND b.type = 'Test' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Типичное серверное и клиентское ПО' AND b.name = 'Взаимодействие ПО между собой на сервере' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Устройство сети Интернет' AND b.name = 'Адресация в интернете' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Устройство сети Интернет' AND b.name = 'Хостинг' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Адресация в интернете' AND b.name = 'Адресация в интернете' AND a.type = 'Subtopic' AND b.type = 'Test' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Хостинг' AND b.name = 'Хостинг' AND a.type = 'Subtopic' AND b.type = 'Test' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Устройство сети Интернет' AND b.name = 'Веб-приложения' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Веб-приложения' AND b.name = 'Типы' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Веб-приложения' AND b.name = 'Функционал' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Веб-приложения' AND b.name = 'Составляющие' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основные принципы и тенденции веб-дизайна' AND b.name = 'Основы веб-дизайна' 
+CREATE (a)-[:Relation {weight:'0.7'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основные принципы и тенденции веб-дизайна' AND b.name = 'Проблемы разнообразия устройств просмотра'  CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Проблемы разнообразия устройств просмотра' AND b.name = 'Проблемы разнообразия устройств просмотра' AND a.type = 'Subtopic' AND b.type = 'Test' CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основы веб-дизайна' AND b.name = 'Основные принципы' 
+CREATE (a)-[:Relation {weight:'0.8'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основы веб-дизайна' AND b.name = 'Современные тенденции' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+
+
+MATCH (a),(b)
+WHERE a.name = 'HTML5' AND b.name = 'Принципы языков разметки' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'HTML5' AND b.name = 'Основы HTML5' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'HTML5' AND b.name = 'Новинки HTML и CSS' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'HTML5' AND b.name = 'Использование HTML и CSS' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Принципы языков разметки' AND b.name = 'DOM' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основы HTML5' AND b.name = 'теги и атрибуты' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основы HTML5' AND b.name = 'формы' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основы HTML5' AND b.name = 'встраивание медиа-материалов' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Новинки HTML и CSS' AND b.name = 'Новинки и особые возможности 5-ой версии HTML и CSS3' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Использование HTML и CSS' AND b.name = 'Настольные устройства' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Использование HTML и CSS' AND b.name = 'Мобильные устройства' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+
+
+MATCH (a),(b)
+WHERE a.name = 'CSS3' AND b.name = 'Новинки HTML и CSS' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'CSS3' AND b.name = 'Использование HTML и CSS' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'CSS3' AND b.name = 'Каскадные таблицы стилей' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'CSS3' AND b.name = 'Препроцессоры CSS' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Каскадные таблицы стилей' AND b.name = 'Принципы' 
+CREATE (a)-[:Relation {weight:'0.6'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Каскадные таблицы стилей' AND b.name = 'Основные свойства' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Препроцессоры CSS' AND b.name = 'SASS' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Препроцессоры CSS' AND b.name = 'LESS' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+
+MATCH (a),(b)
+WHERE a.name = 'JavaScript и jQuery' AND b.name = 'JavaScript' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'JavaScript и jQuery' AND b.name = 'Прототипно-ориентированные ЯП' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'JavaScript и jQuery' AND b.name = 'jQuery. Применимость фреймворка и основной функционал' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'JavaScript' AND b.name = 'Применимость языка' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'JavaScript' AND b.name = 'Основные принципы языка' 
+CREATE (a)-[:Relation {weight:'0.7'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Прототипно-ориентированные ЯП' AND b.name = 'Основные функции' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Прототипно-ориентированные ЯП' AND b.name = 'Работа с DOM' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Прототипно-ориентированные ЯП' AND b.name = 'События' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Прототипно-ориентированные ЯП' AND b.name = 'Лямбда-выражения' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'jQuery. Применимость фреймворка и основной функционал' AND b.name = 'Получения элемента' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'jQuery. Применимость фреймворка и основной функционал' AND b.name = 'Связанная анимация' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'jQuery. Применимость фреймворка и основной функционал' AND b.name = 'Выдвижная панель' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'jQuery. Применимость фреймворка и основной функционал' AND b.name = 'Галерея изображений' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'jQuery. Применимость фреймворка и основной функционал' AND b.name = 'Кликабельные блоки' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'jQuery. Применимость фреймворка и основной функционал' AND b.name = 'Кликабельные блоки' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Ubuntu Linux' AND b.name = 'Основы Ubuntu Linux' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Ubuntu Linux' AND b.name = 'Работа с Ubuntu Linux в консоли' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Ubuntu Linux' AND b.name = 'Установка и настройка необходимых сервисов для работы php' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основы Ubuntu Linux' AND b.name = 'Основы устройства Ubuntu Linux' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с Ubuntu Linux в консоли' AND b.name = 'Управление терминалом' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с Ubuntu Linux в консоли' AND b.name = 'Работа с файлами' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с Ubuntu Linux в консоли' AND b.name = 'Получение справки' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с Ubuntu Linux в консоли' AND b.name = 'Архивация' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с Ubuntu Linux в консоли' AND b.name = 'Работа с менеджером пакетов' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с Ubuntu Linux в консоли' AND b.name = 'Манипуляции с текстом' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с Ubuntu Linux в консоли' AND b.name = 'Монтирование файловых систем' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Установка и настройка необходимых сервисов для работы php' AND b.name = 'Установка и настройка Apache 2.2 на ОС Ubuntu 14.04' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Установка и настройка необходимых сервисов для работы php' AND b.name = 'Установка и настройка PHP5 на ОС Ubuntu 14.04' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основы PHP5' AND b.name = 'Синтаксис PHP5' 
+CREATE (a)-[:Relation {weight:'0.6'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основы PHP5' AND b.name = 'Основные принципы и конструкции языка' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Синтаксис PHP5' AND b.name = 'Переменные и типы данных' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Синтаксис PHP5' AND b.name = 'Условные операторы' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Синтаксис PHP5' AND b.name = 'Циклы' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Синтаксис PHP5' AND b.name = 'Массивы' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основные принципы и конструкции языка' AND b.name = 'Основные принципы и конструкции языка' AND a.type = 'Subtopic' AND b.type = 'Test' CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Принципы построения веб-приложений на PHP5' AND b.name = 'Обзор стандартных модулей и функций' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Обзор стандартных модулей и функций' AND b.name = 'Работа со строками' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Обзор стандартных модулей и функций' AND b.name = 'Работа с массивами' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Обзор стандартных модулей и функций' AND b.name = 'Работа с файловой системой' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Обзор стандартных модулей и функций' AND b.name = 'Работа с сессиями' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Обзор стандартных модулей и функций' AND b.name = 'Работа с формами' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'ООП в PHP5' AND b.name = 'Принципы ООП' 
+CREATE (a)-[:Relation {weight:'0.7'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'ООП в PHP5' AND b.name = 'Реализация шаблонов проектирования' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Принципы ООП' AND b.name = 'Инкапсуляция' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Принципы ООП' AND b.name = 'Наследование' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Принципы ООП' AND b.name = 'Полиморфизм' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Реализация шаблонов проектирования' AND b.name = 'Порождающие шаблоны' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Реализация шаблонов проектирования' AND b.name = 'Структурные шаблоны' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Реализация шаблонов проектирования' AND b.name = 'Поведенческие шаблоны' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+
+MATCH (a),(b)
+WHERE a.name = 'MVC в PHP5' AND b.name = 'MVC для создания каркаса веб-приложения' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'MVC для создания каркаса веб-приложения' AND b.name = 'MVC архитектура' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+
+MATCH (a),(b)
+WHERE a.name = 'MySQL' AND b.name = 'Продвинутые техники и работа с СУБД в PHP5' 
+CREATE (a)-[:Relation {weight:'0.6'}]->(b)
+
+
+
+MATCH (a),(b)
+WHERE a.name = 'MySQL' AND b.name = 'Использование MySQL для создания веб-приложения' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Продвинутые техники и работа с СУБД в PHP5' AND b.name = 'Работа с MySQL из PHP5' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Продвинутые техники и работа с СУБД в PHP5' AND b.name = 'PDO' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Продвинутые техники и работа с СУБД в PHP5' AND b.name = 'Объектно-реляционный проектор (ORM) Doctrine2' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Использование MySQL для создания веб-приложения' AND b.name = 'Создание веб-приложения' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Безопасность веб-приложений' AND b.name = 'Методы защиты веб-приложений от взлома' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Методы защиты веб-приложений от взлома' AND b.name = 'Практика использования приёмов защиты веб-приложений от взлома' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+
+MATCH (n:Node { name: 'Продвинутые техники PHP5' })
+DELETE n
+
+MATCH (n:Node { name: 'Библиотеки для работы с HTTP' })
+DELETE n
+
+MATCH (n:Node { name: 'Библиотеки cURL' })
+DELETE n
+
+MATCH (n:Node { name: 'Библиотеки GD2' })
+DELETE n
+
+MATCH (n:Node { name: 'Обзор существующих движков и их сравнение' })
+DELETE n
+
+MATCH (n:Node { name: 'MyISAM' })
+DELETE n
+
+MATCH (n:Node { name: 'InnoDB' })
+DELETE n
+
+MATCH (n:Node { name: 'Memory' })
+DELETE n
+
+MATCH (n:Node { name: 'Основные операторы и функции' })
+DELETE n
+
+MATCH (n:Node { name: 'Сортировка' })
+DELETE n
+
+MATCH (n:Node { name: 'Группировка данных' })
+DELETE n
+
+MATCH (n:Node { name: 'Объединение таблиц' })
+DELETE n
+
+
+CREATE (:Node { name: 'Question 1', type: 'Question' })
+CREATE (:Node { name: 'Question 2', type: 'Question' })
+CREATE (:Node { name: 'Question 3', type: 'Question' })
+CREATE (:Node { name: 'Question 4',type: 'Question' })
+CREATE (:Node { name: 'Question 5', type: 'Question' })
+CREATE (:Node { name: 'Question 6', type: 'Question' })
+CREATE (:Node { name: 'Question 7', type: 'Question' })
+CREATE (:Node { name: 'Question 8', type: 'Question' })
+CREATE (:Node { name: 'Question 9',type: 'Question' })
+CREATE (:Node { name: 'Question 10',type: 'Question' })
+CREATE (:Node { name: 'Question 11', type: 'Question' })
+CREATE (:Node { name: 'Question 12', type: 'Question' })
+CREATE (:Node { name: 'Question 13', type: 'Question' })
+CREATE (:Node { name: 'Question 14', type: 'Question' })
+CREATE (:Node { name: 'Question 15', type: 'Question' })
+CREATE (:Node { name: 'Question 16', type: 'Question' })
+CREATE (:Node { name: 'Question 17', type: 'Question' })
+CREATE (:Node { name: 'Question 18', type: 'Question' })
+CREATE (:Node { name: 'Question 19', type: 'Question' })
+CREATE (:Node { name: 'Question 20', type: 'Question' })
+CREATE (:Node { name: 'Question 21', type: 'Question' })
+CREATE (:Node { name: 'Question 22', type: 'Question' })
+CREATE (:Node { name: 'Question 23', type: 'Question' })
+CREATE (:Node { name: 'Question 24', type: 'Question' })
+CREATE (:Node { name: 'Question 25', type: 'Question' })
+CREATE (:Node { name: 'Question 26', type: 'Question' })
+CREATE (:Node { name: 'Question 27', type: 'Question' })
+CREATE (:Node { name: 'Question 28', type: 'Question' })
+CREATE (:Node { name: 'Question 29', type: 'Question' })
+CREATE (:Node { name: 'Question 30', type: 'Question' })
+CREATE (:Node { name: 'Question 31', type: 'Question' })
+CREATE (:Node { name: 'Question 32', type: 'Question' })
+CREATE (:Node { name: 'Question 33', type: 'Question' })
+CREATE (:Node { name: 'Question 34', type: 'Question' })
+CREATE (:Node { name: 'Question 35', type: 'Question' })
+CREATE (:Node { name: 'Question 36', type: 'Question' })
+CREATE (:Node { name: 'Question 37', type: 'Question' })
+CREATE (:Node { name: 'Question 38', type: 'Question' })
+CREATE (:Node { name: 'Question 39', type: 'Question' })
+CREATE (:Node { name: 'Question 40', type: 'Question' })
+CREATE (:Node { name: 'Question 41', type: 'Question' })
+CREATE (:Node { name: 'Question 42', type: 'Question' })
+CREATE (:Node { name: 'Question 43', type: 'Question' })
+CREATE (:Node { name: 'Question 44', type: 'Question' })
+CREATE (:Node { name: 'Question 45', type: 'Question' })
+CREATE (:Node { name: 'Question 46', type: 'Question' })
+CREATE (:Node { name: 'Question 47', type: 'Question' })
+CREATE (:Node { name: 'Question 48', type: 'Question' })
+CREATE (:Node { name: 'Question 49', type: 'Question' })
+CREATE (:Node { name: 'Question 50', type: 'Question' })
+CREATE (:Node { name: 'Question 51', type: 'Question' })
+CREATE (:Node { name: 'Question 52', type: 'Question' })
+CREATE (:Node { name: 'Question 53', type: 'Question' })
+CREATE (:Node { name: 'Question 54', type: 'Question' })
+CREATE (:Node { name: 'Question 55', type: 'Question' })
+CREATE (:Node { name: 'Question 56', type: 'Question' })
+CREATE (:Node { name: 'Question 57', type: 'Question' })
+CREATE (:Node { name: 'Question 58', type: 'Question' })
+CREATE (:Node { name: 'Question 59', type: 'Question' })
+CREATE (:Node { name: 'Question 60', type: 'Question' })
+CREATE (:Node { name: 'Question 61', type: 'Question' })
+CREATE (:Node { name: 'Question 62', type: 'Question' })
+CREATE (:Node { name: 'Question 63', type: 'Question' })
+CREATE (:Node { name: 'Question 64', type: 'Question' })
+CREATE (:Node { name: 'Question 65', type: 'Question' })
+CREATE (:Node { name: 'Question 66', type: 'Question' })
+CREATE (:Node { name: 'Question 67', type: 'Question' })
+CREATE (:Node { name: 'Question 68', type: 'Question' })
+CREATE (:Node { name: 'Question 69', type: 'Question' })
+CREATE (:Node { name: 'Question 70', type: 'Question' })
+CREATE (:Node { name: 'Question 71', type: 'Question' })
+CREATE (:Node { name: 'Question 72', type: 'Question' })
+CREATE (:Node { name: 'Question 73', type: 'Question' })
+CREATE (:Node { name: 'Question 74', type: 'Question' })
+CREATE (:Node { name: 'Question 75', type: 'Question' })
+CREATE (:Node { name: 'Question 76', type: 'Question' })
+CREATE (:Node { name: 'Question 77', type: 'Question' })
+CREATE (:Node { name: 'Question 78', type: 'Question' })
+CREATE (:Node { name: 'Question 79', type: 'Question' })
+CREATE (:Node { name: 'Question 80', type: 'Question' })
+CREATE (:Node { name: 'Question 81', type: 'Question' })
+CREATE (:Node { name: 'Question 82', type: 'Question' })
+CREATE (:Node { name: 'Question 83', type: 'Question' })
+CREATE (:Node { name: 'Question 84', type: 'Question' })
+CREATE (:Node { name: 'Question 85', type: 'Question' })
+
+MATCH (a),(b)
+WHERE a.name = 'Введение в клиент-серверную модель' AND a.type = 'Test'  AND b.name = 'Question 1' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Взаимодействие ПО между собой на сервере' AND a.type = 'Test'  AND b.name = 'Question 2' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Взаимодействие ПО между собой на сервере' AND a.type = 'Test'  AND b.name = 'Question 70' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Адресация в интернете' AND a.type = 'Test'  AND b.name = 'Question 3' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Хостинг' AND a.type = 'Test'  AND b.name = 'Question 4' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Типы' AND a.type = 'Test'  AND b.name = 'Question 5' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Функционал' AND a.type = 'Test'  AND b.name = 'Question 6' 
+CREATE (a)-[:Relation {weight:'0.7'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Функционал' AND a.type = 'Test'  AND b.name = 'Question 69' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+
+MATCH (a),(b)
+WHERE a.name = 'Составляющие' AND a.type = 'Test'  AND b.name = 'Question 7' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основные принципы' AND a.type = 'Test'  AND b.name = 'Question 8' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Современные тенденции' AND a.type = 'Test'  AND b.name = 'Question 9' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Проблемы разнообразия устройств просмотра' AND a.type = 'Test'  AND b.name = 'Question 10' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'DOM' AND a.type = 'Test'  AND b.name = 'Question 11' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'теги и атрибуты' AND a.type = 'Test'  AND b.name = 'Question 12' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'формы' AND a.type = 'Test'  AND b.name = 'Question 13' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'встраивание медиа-материалов' AND a.type = 'Test'  AND b.name = 'Question 14' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Новинки и особые возможности 5-ой версии HTML и CSS3' AND a.type = 'Test'  AND b.name = 'Question 15' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Настольные устройства' AND a.type = 'Test'  AND b.name = 'Question 16' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Мобильные устройства' AND a.type = 'Test'  AND b.name = 'Question 17' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Принципы' AND a.type = 'Test'  AND b.name = 'Question 18' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основные свойства' AND a.type = 'Test'  AND b.name = 'Question 19' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'SASS' AND a.type = 'Test'  AND b.name = 'Question 20' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'LESS' AND a.type = 'Test'  AND b.name = 'Question 21' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Применимость языка' AND a.type = 'Test'  AND b.name = 'Question 22' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основные принципы языка' AND a.type = 'Test'  AND b.name = 'Question 23' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основные функции' AND a.type = 'Test'  AND b.name = 'Question 24' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с DOM' AND a.type = 'Test'  AND b.name = 'Question 25' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'События' AND a.type = 'Test'  AND b.name = 'Question 26' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Лямбда-выражения' AND a.type = 'Test'  AND b.name = 'Question 27' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Получения элемента' AND a.type = 'Test'  AND b.name = 'Question 28' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Связанная анимация' AND a.type = 'Test'  AND b.name = 'Question 29' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Выдвижная панель' AND a.type = 'Test'  AND b.name = 'Question 30' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Галерея изображений' AND a.type = 'Test'  AND b.name = 'Question 31' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Кликабельные блоки' AND a.type = 'Test'  AND b.name = 'Question 32' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основы устройства Ubuntu Linux' AND a.type = 'Test'  AND b.name = 'Question 33' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Управление терминалом' AND a.type = 'Test'  AND b.name = 'Question 34' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с файлами' AND a.type = 'Test'  AND b.name = 'Question 35' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с файлами' AND a.type = 'Test'  AND b.name = 'Question 68' 
+CREATE (a)-[:Relation {weight:'0.5'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Получение справки' AND a.type = 'Test'  AND b.name = 'Question 36' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Архивация' AND a.type = 'Test'  AND b.name = 'Question 37' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с менеджером пакетов' AND a.type = 'Test'  AND b.name = 'Question 38' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Манипуляции с текстом' AND a.type = 'Test'  AND b.name = 'Question 39' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Монтирование файловых систем' AND a.type = 'Test'  AND b.name = 'Question 40' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Установка и настройка Apache 2.2 на ОС Ubuntu 14.04' AND a.type = 'Test'  AND b.name = 'Question 41' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Установка и настройка PHP5 на ОС Ubuntu 14.04' AND a.type = 'Test'  AND b.name = 'Question 42' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Переменные и типы данных' AND a.type = 'Test'  AND b.name = 'Question 43' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Условные операторы' AND a.type = 'Test'  AND b.name = 'Question 44' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Циклы' AND a.type = 'Test'  AND b.name = 'Question 45' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Массивы' AND a.type = 'Test'  AND b.name = 'Question 46' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Основные принципы и конструкции языка' AND a.type = 'Test'  AND b.name = 'Question 47' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа со строками' AND a.type = 'Test'  AND b.name = 'Question 48' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с массивами' AND a.type = 'Test'  AND b.name = 'Question 49' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с файловой системой' AND a.type = 'Test'  AND b.name = 'Question 50' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с сессиями' AND a.type = 'Test'  AND b.name = 'Question 51' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с формами' AND a.type = 'Test'  AND b.name = 'Question 52' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Инкапсуляция' AND a.type = 'Test'  AND b.name = 'Question 53' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Наследование' AND a.type = 'Test'  AND b.name = 'Question 54' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Полиморфизм' AND a.type = 'Test'  AND b.name = 'Question 55' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Полиморфизм' AND a.type = 'Test'  AND b.name = 'Question 66' 
+CREATE (a)-[:Relation {weight:'0.3'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Полиморфизм' AND a.type = 'Test'  AND b.name = 'Question 67' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Порождающие шаблоны' AND a.type = 'Test'  AND b.name = 'Question 56' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Структурные шаблоны' AND a.type = 'Test'  AND b.name = 'Question 57' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Поведенческие шаблоны' AND a.type = 'Test'  AND b.name = 'Question 58' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'MVC архитектура' AND a.type = 'Test'  AND b.name = 'Question 59' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с MySQL из PHP5' AND a.type = 'Test'  AND b.name = 'Question 60' 
+CREATE (a)-[:Relation {weight:'0.4'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Работа с MySQL из PHP5' AND a.type = 'Test'  AND b.name = 'Question 65' 
+CREATE (a)-[:Relation {weight:'0.6'}]->(b)
+
+
+MATCH (a),(b)
+WHERE a.name = 'PDO' AND a.type = 'Test'  AND b.name = 'Question 60' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Объектно-реляционный проектор (ORM) Doctrine2' AND a.type = 'Test'  AND b.name = 'Question 61' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Создание веб-приложения' AND a.type = 'Test'  AND b.name = 'Question 61' 
+CREATE (a)-[:Relation {weight:'1.0'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Практика использования приёмов защиты веб-приложений от взлома' AND a.type = 'Test'  AND b.name = 'Question 62' 
+CREATE (a)-[:Relation {weight:'0.7'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Практика использования приёмов защиты веб-приложений от взлома' AND a.type = 'Test'  AND b.name = 'Question 63' 
+CREATE (a)-[:Relation {weight:'0.1'}]->(b)
+
+MATCH (a),(b)
+WHERE a.name = 'Практика использования приёмов защиты веб-приложений от взлома' AND a.type = 'Test'  AND b.name = 'Question 64' 
+CREATE (a)-[:Relation {weight:'0.2'}]->(b)
